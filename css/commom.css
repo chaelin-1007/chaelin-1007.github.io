@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Noto+Sans+KR:wght@300;400;700&display=swap');
+@font-face {font-family: 'NEXON Lv1 Gothic OTF'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff'); font-weight: normal; font-style: normal}
+/* 폰트 설정 */
+body{font-family: 'Noto Sans KR','Karla', sans-serif; font-size: 16px; line-height: 1.3; letter-spacing: -0.5px; color: #000; }
+
+/* 초기화 */
+body,h1,h2,h3,h4,h5,h6,dl,dt,dd,ol,ul,li,p,form,input,button{margin: 0; padding: 0;}
+ul{list-style: none;}
+img{vertical-align: top;}
+a{text-decoration: none; color: #000;}
+
+/* html5에 새롭게 추가된 태그에 대한 설정 */
+header,footer,nav,section,article,aside{display: block;}
+
+/* 데스크탑 퍼스트 방식 */
+/* 데스크탑 기본 1281px 부터 나머지 모든 해상도 */
+
+/* 공통 */
+body{padding-top: 90px;}
+.inner{width: 1170px; margin: 0 auto;}
+#mainContent .sec{padding: 120px 0;}
+#mainContent .sec h2{font-family: 'Karla'; font-size:48px; font-weight: 600; text-align: center; margin-bottom: 50px;}
+
+/* 헤더영역 */
+#header{position: fixed;top: 0; left: 0; right: 0; z-index: 100; background-color: #e6def3;}
+#header .inner{height: 90px; padding-top: 28px; box-sizing: border-box;}
+#header .logo{font-family: 'Black Han Sans'; font-size: 38px; font-weight: 800; line-height: 1; float: left;}
+#header .gnbWrap{float: right;}
+#header .gnbWrap #gnb::after{content: ""; display: block; clear: both;}
+#header .gnbWrap #gnb li{float: left; padding-left: 30px; padding-right: 30px;}
+#header .gnbWrap #gnb li:last-child{padding-right: 0;}
+#header .gnbWrap #gnb li a{display: block; font-size: 22px; line-height: 38px; color: #333; position: relative;}
+#header .gnbWrap #gnb li.on a{color: #324679; font-weight: 800;}
+#header .gnbWrap #gnb li a::before{content: ""; position: absolute; left: 0; bottom: 0; width: 0; height: 3px; background-color: #7252a5; transition: width 0.6s ease;}
+#header .gnbWrap #gnb li.on a::before{width: 100%;}
+
+/* 모바일 헤더영역 */
+#headerM, #menuAreaM{display: none;}
+
+/* swiper - 메인비주얼 영역 */
+:root {--swiper-theme-color: #742ee6;}
+.mainVisualArea{overflow: hidden;}
+.mainVisualArea .swiper-container{position: relative;}
+.mainVisualArea .swiper-wrapper .swiper-slide img{width: 100%;}
+#mainVisual .swiper-pagination .swiper-pagination-bullet{width: 12px; height: 12px;}
+#mainVisual .swiper-pagination-bullets .swiper-pagination-bullet{margin: 0 6px;}
+
+/* about 영역 */
+#mainContent .inner .aboutWrap::after{content: ""; display: block; clear: both;}
+#mainContent .inner .aboutWrap .colLeft{float: left; width: 574px; padding: 45px; border: 1px solid #d9d9d9; box-sizing: border-box;}
+#mainContent .inner .aboutWrap .colLeft .txtBox{margin-bottom: 39px;}
+#mainContent .inner .aboutWrap .colLeft .txtBox span{font-weight: 700; color: #324679;}
+#mainContent .inner .aboutWrap .colLeft .txtBox p{font-size: 22px;}
+#mainContent .inner .aboutWrap .colLeft .detailProfile{overflow: hidden;}
+#mainContent .inner .aboutWrap .colLeft .detailProfile dt{float: left; width: 25%; font-size: 15px; line-height: 1.8;}
+#mainContent .inner .aboutWrap .colLeft .detailProfile dd{float: left; width: 75%; font-size: 15px; line-height: 1.8;}
+#mainContent .inner .aboutWrap .colRight{float: right; width: 574px;}
+#mainContent .inner .aboutWrap .colRight .email{border: 1px solid #d9d9d9; width: 276px; float: left; height: 188px; padding-top: 118px; box-sizing: border-box; text-align: center; background: url(../images/icon_email.png) no-repeat 50% 58px; }
+#mainContent .inner .aboutWrap .colRight .phone{border: 1px solid #d9d9d9; width: 276px; float: left; margin-left: 22px; height: 188px; padding-top: 118px; box-sizing: border-box; text-align: center; background: url(../images/ico_phone.png) no-repeat 50% 58px;}
+#mainContent .inner .aboutWrap .colRight .skill{border: 1px solid #d9d9d9; width: 574px; float: left; margin-top: 22px; padding-top: 31px; height: 122px; box-sizing: border-box; text-align: center;}
+#mainContent .inner .aboutWrap .colRight .skill ul{display: inline-block;}
+#mainContent .inner .aboutWrap .colRight .skill ul li{float: left;}
+#mainContent .inner .aboutWrap .colRight .skill ul li + li{margin-left: 5px;}
+#mainContent .sec1 .buttonWrap{text-align: center; margin-top: 40px;}
+#mainContent .sec1 .buttonWrap .btnDown{display:inline-block; width: 180px; height: 48px; border-radius: 24px; background-color: #7252a5; font-size: 18px; line-height: 48px;color: #fff; text-align: center;}
+
+ /* work 영역 */
+ #mainContent .workWrap .col{display: block;}
+ #mainContent .workWrap .col:first-child{margin-bottom: 100px;}
+ #mainContent .workWrap .col ul::after{content: ""; display: block; clear: both;}
+ #mainContent .workWrap .col ul li{float: left; position: relative; border: 1px solid #d9d9d9; width: 376px; height: 376px; box-sizing: border-box;}
+ #mainContent .workWrap .col ul li .txt{display: block; width: 100%; text-align: center; position: absolute; top: 50%; transform: translateY(-50%);}
+ #mainContent .workWrap .col ul li+li{margin-left: 20px;}
+ #mainContent .workWrap .col ul li .wrap_1{position: relative; width: 100%; height: 100%; font-size: 24px; box-shadow: 5px,5px,5px rgba(0, 0, 0, 0);}
+ #mainContent .workWrap .col ul li:hover .wrap_1{box-shadow: 5px 5px 5px rgba(114, 82, 165, 0.5);}
+ #mainContent .workWrap .col ul li .wrap_1 .txt{font-family: 'NEXON Lv1 Gothic OTF'; display: block; text-align: center;}
+ #mainContent .workWrap .col ul li .wrap_1:hover .txt{opacity: 0;}
+ #mainContent .workWrap .col ul li .iconWrap{opacity: 0; text-align: center; width: 100%; height: 64px; position: absolute; top: 50%; transform: translateY(-50%); transition: all 0.1s;}
+ #mainContent .workWrap .col ul li:hover .iconWrap {opacity: 1;}
+ #mainContent .workWrap .col ul li .iconWrap span{display: inline-block;}
+ #mainContent .workWrap .col ul li .iconWrap span a{display: block;}
+ #mainContent .workWrap .col ul li .iconWrap span a img{width: 100%; height: 100%;}
+ #mainContent .workWrap .col ul li .iconWrap_le{display: inline-block; width: 64px; height: 64px; opacity: 1; padding: 0; margin-right: 10px;}
+ #mainContent .workWrap .col ul li .iconWrap_ri{display: inline-block; width: 64px; height: 64px; opacity: 1; padding: 0;}
+
+/* contact 영역 */
+#mainContent .contactWrap{text-align: center; }
+#mainContent .txtBox{font-size: 22px; line-height: 1.5; margin-bottom: 80px;}
+#mainContent .contactWrap ul{display: inline-block;}
+#mainContent .contactWrap ul li{float: left;}
+#mainContent .contactWrap ul li + li{margin-left: 20px;}
+#mainContent .contactWrap ul li i{width: 60px; height: 60px; font-size: 28px; background-color: #333; color: #fff; border-radius: 50%; line-height: 60px;}
+#mainContent .contactWrap ul li .txt{font-size: 18px;}
+
+/* 푸터영역 */
+#footer{background-image: linear-gradient(to right, #b89ce4 , #7252a5); color: #fff; text-align: center;}
+#footer .inner{padding: 20px 0 40px 0;}
+
+/* 미디어쿼리 분기 시작 */
+/* 1001px ~ 1280px */
+@media screen and (max-width:1280px) {
+    .inner{width: 960px;}
+    #header .logo{font-size: 28px;}
+    #header .gnbWrap #gnb li{padding: 0 20px;}
+    #header .gnbWrap #gnb li a{font-size: 18px; line-height: 30px;}
+    #mainContent .inner .aboutWrap .colLeft{width: 470px; padding: 35px; box-sizing: border-box;}
+    #mainContent .inner .aboutWrap .colRight{width: 470px;}
+    #mainContent .inner .aboutWrap .colRight .email{width: 225px; font-size: 14px; height: 160px; padding-top: 105px; background: url(../images/ico_email.svg) no-repeat 50% 48px; background-size: 36px auto;}
+    #mainContent .inner .aboutWrap .colRight .phone{width: 225px; font-size: 14px; margin-left: 20px; height: 160px; padding-top: 105px; background: url(../images/ico_phone.svg) no-repeat 50% 44px; background-size: 28px auto;}
+    #mainContent .inner .aboutWrap .colRight .skill{width: 100%; margin-top: 20px; padding-top: 25px; height:111px;}
+    #mainContent .inner .aboutWrap .colLeft .detailProfile dt{font-size: 14px; line-height: 1.6;}
+    #mainContent .inner .aboutWrap .colLeft .detailProfile dd{font-size: 14px; line-height: 1.6;}
+    #mainContent .sec1 .buttonWrap .btnDown{width: 160px; height: 40px; border-radius: 20px; font-size: 16px; line-height: 40px;}
+    #mainContent .workWrap .col ul li{float: left; position: relative; border: 1px solid #d9d9d9; width: 306px; height: 306px; box-sizing: border-box;}
+    #mainContent .workWrap .col ul li .wrap_1 .txt{font-size: 20px;}
+}
+
+
+/* 601px ~ 1000px */
+@media screen and (max-width: 1000px) {
+    body{padding-top: 0;}
+    .inner{width: auto; padding: 0 5%;}
+    #header{display: none;}
+    #headerM, #menuAreaM{display: block;}
+    #headerM{height: 100px;}
+    #headerM .innerM{height: 100%; position: relative;}
+    #headerM .innerM .logo{font-family: 'Black Han Sans'; font-weight: bold; font-size: 30px; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+    #headerM .innerM .btn_open{position: absolute; right: 40px; top: 50%; transform: translateY(-50%);border: 0;background-color: transparent;cursor: pointer;}
+    #menuAreaM{ background-color: #fff; position: fixed; right: -80%; top: 0; z-index: 100;width: 80%; height: 100%;}
+    #menuAreaM #gnbM{margin-top: 60px;}
+    #menuAreaM #gnbM li{border-bottom: 1px solid #d9d9d9;}
+    #menuAreaM #gnbM li a{display: block; font-size: 36px; padding:15px 0 15px 60px; position: relative;}
+    #menuAreaM #gnbM li a::before{content: "\f105"; position: absolute; left: 20px; top: 50%; transform: translateY(-50%); font-family: "Font Awesome 5 Free"; font-weight: 900; font-size: 22px; color: #7252a5; transition: left .3s ease;  }
+    #menuAreaM #gnbM li a span{display: inline-block; position: relative;}
+    #menuAreaM #gnbM li a span::after{content: ""; position: absolute; left: 0; top: 50%; width: 0; height: 8px; background-color: rgba(184, 156, 228, 0.5); transition: width .3s ease;}
+    #menuAreaM #gnbM li a:hover span::after{width: 120%;}
+    #menuAreaM #gnbM li a:hover::before{left: 30px;}
+    #menuAreaM .btn_close{position: absolute; right: 40px; top: 40px; border: 0; background-color: transparent; cursor: pointer;}
+    #mainContent .inner .aboutWrap .colLeft{float: none; width: 100%; padding: 35px;}
+    #mainContent .inner .aboutWrap .colRight{float: none; width: 100%; margin-top: 20px;}
+    #mainContent .inner .aboutWrap .colRight .skill ul li + li{margin-left: 20px;}
+    #mainContent .inner .aboutWrap .colRight .email{width: 48.5%;}
+    #mainContent .inner .aboutWrap .colRight .phone{width: 48.5%; margin-left: 3%;}
+    #mainContent .workWrap .col ul li{width: 31%; height: 215px;}
+    #mainContent .workWrap .col ul li .wrap_1 .txt{font-size: 18px;}
+    #mainContent .workWrap .col ul li .iconWrap{height: 40px;}
+    #mainContent .workWrap .col ul li .iconWrap_le{width: 40px; height: 40px;}
+    #mainContent .workWrap .col ul li .iconWrap_ri{width: 40px; height: 40px;}
+}
+
+
+/* 가장 작은 사이즈(320px 360px 480px)부터 600px 까지*/
+@media screen and (max-width: 600px) {
+    #mainContent .inner .aboutWrap .colRight .skill{height:auto; padding: 30px 0;}
+    #mainContent .inner .aboutWrap .colRight .skill ul li + li{margin-left: 20px;}
+    #mainContent .inner .aboutWrap .colRight .skill ul li:nth-child(4){clear: left; padding-top: 20px; margin-left: 30px;}
+    #mainContent .inner .aboutWrap .colRight .skill ul li:nth-child(5){padding-top: 20px;}
+    #mainContent .inner .aboutWrap .colRight .skill ul li:nth-child(6){padding-top: 20px; margin-left: 20px;}
+    #mainContent .workWrap .col ul li{width: 30%; height: 215px;}
+    #mainContent .workWrap .col ul li .wrap_1 .txt{font-size: 16px;}
+    #mainContent .workWrap .col ul li .iconWrap{height: 30px;}
+    #mainContent .workWrap .col ul li .iconWrap_le{width: 30px; height: 30px;}
+    #mainContent .workWrap .col ul li .iconWrap_ri{width: 30px; height: 30px;}
+    #mainContent .contactWrap ul {text-align: left;}
+    #mainContent .contactWrap ul li {float: none;}
+    #mainContent .contactWrap ul li + li {margin-left: 0; margin-top: 10px;}
+    #mainContent .contactWrap ul li i {text-align: center;}
+}
+
+/* 375px 까지*/
+@media screen and (max-width: 375px) {
+    #mainContent .inner .aboutWrap .colLeft .txtBox p{font-size: 19px;}
+    #mainContent .workWrap .col ul li{width: 29%; height: 215px;}
+    #mainContent .workWrap .col ul li .wrap_1 .txt{font-size: 14px;}
+    #mainContent .contactWrap .txtBox{font-size: 14px; letter-spacing: -0.9px;}
+}
